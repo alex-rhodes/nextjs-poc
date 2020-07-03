@@ -11,7 +11,7 @@ app.prepare().then(() => {
   const server = express();
 
   server.use(
-    "http://localhost:3000",
+    "/product-api/pdp-service/partNumber/*",
     createProxyMiddleware({
       target: "https://www.argos.co.uk",
       changeOrigin: true,

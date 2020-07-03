@@ -10,10 +10,12 @@ function Index({ productData, avgRating }) {
   const { partNumber, name } = productData.attributes;
 
   const { data } = useSWR(
-    "https://www.argos.co.uk/product-api/pdp-service/partNumber/4642811",
+    "/product-api/pdp-service/partNumber/4642811",
     ClientSideFetch
   );
-  console.log("!!!", data);
+
+  const price = data?.data.attributes?.price;
+
   return (
     <div className="container">
       <div className="content-block">
@@ -27,7 +29,7 @@ function Index({ productData, avgRating }) {
           <p>{name}</p>
           <p>This product has {avgRating} ⭐️'s</p>
           <div className="price">
-            {data ? <strong>Price Here</strong> : <PriceSkeleton />}
+            {price ? <strong>£{price.now}</strong> : <PriceSkeleton />}
           </div>
         </div>
       </div>
