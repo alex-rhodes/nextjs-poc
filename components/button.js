@@ -4,7 +4,7 @@ export default function Button() {
   return (
     <>
       <Link href="//argos.co.uk/product/4642811" passHref={true}>
-        <a>Add To Trolly</a>
+        <a>Add To Trolley</a>
       </Link>
       <style jsx>{`
         a {
