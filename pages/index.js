@@ -15,7 +15,6 @@ function Index({ productData, avgRating }) {
   );
 
   const price = data?.data.attributes?.price;
-
   return (
     <div className="container">
       <div className="content-block">
