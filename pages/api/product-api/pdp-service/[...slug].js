@@ -7,7 +7,7 @@ const options = {
 };
 
 const apiProxy = createProxyMiddleware(
-  "/product-api/pdp-service/partNumber/*",
+  "/product-api/pdp-service/partNumber/(*)",
   options
 );
 
