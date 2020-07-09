@@ -10,11 +10,11 @@ function Index({ productData, avgRating }) {
   const { partNumber, name } = productData.attributes;
 
   const { data } = useSWR(
-    "/product-api/pdp-service/partNumber/4642811",
+    "api/product-api/pdp-service/partNumber/4642811",
     ClientSideFetch
   );
 
-  const price = data?.data.attributes?.price;
+  const price = data?.data?.attributes?.price;
   return (
     <div className="container">
       <div className="content-block">

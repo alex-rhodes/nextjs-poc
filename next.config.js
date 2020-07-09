@@ -1,10 +1,9 @@
 module.exports = {
-  async rewrites() {
-    return [
-      {
-        source: `/product-api/pdp-service/partNumber/*`,
-        destination: `https://www.argos.co.uk/product-api/pdp-service/partNumber/*`,
-      },
-    ];
-  },
+  rewrites: () => [
+    {
+      source: "api/product-api/pdp-service/partNumber/*",
+      destination:
+        "https://www.argos.co.uk/product-api/pdp-service/partNumber/*",
+    },
+  ],
 };
